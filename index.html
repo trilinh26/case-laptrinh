@@ -59,7 +59,8 @@
             <button onclick="add()" class="add"
                 style="width:15%; height:34px;font-size: 25px; margin-left: 13%;background-color: rgb(255, 247, 137);">Sumbit</button>
             <input type="text" id="searchItem" style="width:25%; height:33px;  margin-left: 20%;">
-            <button onclick="search()" class="add" style="width:15%; height:34px;font-size: 25px;background-color: rgb(255, 247, 137);" >Search</button>
+            <button onclick="search()" class="add"
+                style="width:15%; height:34px;font-size: 25px;background-color: rgb(255, 247, 137);">Search</button>
 
         </div>
     </h2>
@@ -73,6 +74,18 @@
             </tr>
         </thead>
     </table>
+    <script>
+        var data = [];
+
+        function add() {
+            let item_id = document.getElementById("id").value;
+            let item_name = document.getElementById("email").value;
+            let item_class = document.getElementById("email").value;
+            let item_email = document.getElementById("email").value;
+        };
+       
+
+    </script>
 </body>
 
 </html>
