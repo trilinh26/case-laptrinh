@@ -83,8 +83,16 @@
             let item_class = document.getElementById("email").value;
             let item_email = document.getElementById("email").value;
         };
-       
-
+        if (item_email == "" || item_name == "" || item_id == "" || item_class == "") { 
+            alert("Thiếu dữ liệu")
+        } else {
+            let item = {
+                email: item_email,
+                name: item_name,
+                id: item_id,
+                class: item_class,
+            }
+        };
     </script>
 </body>
 
