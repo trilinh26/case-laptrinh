@@ -101,7 +101,8 @@
                     data.push(item);
                 }
                 show();
-                render();
+
+                clear();
             };
 
         };
@@ -134,9 +135,8 @@
                 if (data[i].id == id) {
                     data.splice(i, 1);
                     show();
-                };
-            };
-
+                }
+            }
         };
         function editItem(id) {
             for (let i = 0; i < data.length; i++) {
@@ -145,12 +145,22 @@
                     document.getElementById("name").value = data[i].name;
                     document.getElementById("class").value = data[i].class;
                     document.getElementById("email").value = data[i].email;
-                };
-            };
+                }
+            }
         };
+        function clear() {
+            document.getElementById("email").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("id").value = "";
+            document.getElementById("class").value = "";
 
+        };
+        function search() {
+            var search = document.getElementById("searchItem").value;
+            var list = this.data;
+            var kq = [];
 
-
+        };
     </script>
 </body>
 
