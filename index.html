@@ -79,18 +79,18 @@
 
         function add() {
             let item_id = document.getElementById("id").value;
-            let item_name = document.getElementById("email").value;
-            let item_class = document.getElementById("email").value;
+            let item_name = document.getElementById("name").value;
+            let item_class = document.getElementById("class").value;
             let item_email = document.getElementById("email").value;
 
-            if (item_email == "" || item_name == "" || item_id == "" || item_class == "") {
+            if (item_id == "" || item_name == "" || item_class == "" || item_email == "") {
                 alert("Thiếu dữ liệu");
             } else {
                 let item = {
-                    email: item_email,
-                    name: item_name,
                     id: item_id,
+                    name: item_name,
                     class: item_class,
+                    email: item_email,
                 };
 
                 let index = data.findIndex((c) => c.id == item.id);
@@ -134,10 +134,21 @@
                 if (data[i].id == id) {
                     data.splice(i, 1);
                     show();
-                }
-            }
+                };
+            };
 
         };
+        function editItem(id) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].id == id) {
+                    document.getElementById("id").value = data[i].id;
+                    document.getElementById("name").value = data[i].name;
+                    document.getElementById("class").value = data[i].class;
+                    document.getElementById("email").value = data[i].email;
+                };
+            };
+        };
+
 
 
     </script>
